@@ -7,13 +7,14 @@ body {
 header {
   background: #29527a;
   color: #fff;
-  padding: 18px 0 8px 0;
   text-align: center;
+  padding-top: 18px;
 }
 header span {
   display: block;
   font-size: 1.9em;
   font-weight: bold;
+  margin-bottom: 18px;
 }
 nav {
   background: #333;
@@ -91,10 +92,11 @@ main {
   background: #eee;
 }
 .section-title {
-  font-size: 1.25em;
+  font-size: 0.8em;
   font-weight: bold;
-  margin: 32px 0 8px 0;
   text-align: center;
+  margin-top: 40px;
+  margin-bottom: -10px;
 }
 .divider {
   border: none;
