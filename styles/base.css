@@ -40,6 +40,9 @@ main {
   max-width: 1200px;
   margin: 0 auto;
 }
+h1{
+  font-size: 1em;
+}
 .my-name{
   font-size: 1em;
   color: #ffe14d;
