@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.6;
 }
 
@@ -143,7 +143,7 @@ body {
 .weather-icon-mobile {
   width: 24px;
   height: 24px;
-  display: inline-block; 
+  display: inline-block;
 }
 
 .weather-header h2::after {
@@ -189,7 +189,7 @@ body {
   .weather-icon-mobile {
     display: inline-block;
   }
-  
+
   .weather-header h2::after {
     display: none;
   }
@@ -211,7 +211,7 @@ body {
   .weather-icon-mobile {
     display: inline-block;
   }
-  
+
   .weather-header h2::after {
     display: none;
   }
