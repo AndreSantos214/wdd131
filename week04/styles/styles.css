@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  margin: 40px auto;
+  width: 400px;
+  height: 600px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
