@@ -1,0 +1,57 @@
+@media (min-width: 768px) {
+  #menu-button {
+    display: none;
+  }
+
+  nav ul {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  nav a {
+    padding: 0.5rem 1rem;
+    border-radius: 0;
+    border-bottom: none;
+    transition: background-color 0.3s;
+  }
+
+  nav a:hover {
+    background-color: #1f4f80;
+    border-radius: 4px;
+  }
+
+  nav li:last-child a {
+    border-bottom: none;
+  }
+
+  main {
+    max-width: 1000px;
+  }
+
+  .temple-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  figure img {
+    height: 220px;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    max-width: 1200px;
+  }
+
+  .temple-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  figure img {
+    height: 200px;
+  }
+}
