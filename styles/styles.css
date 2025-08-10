@@ -88,6 +88,10 @@ legend {
   font-weight: 600;
 }
 
+.required-field {
+  color: rgb(175, 49, 49);
+}
+
 input[type="checkbox"],
 input[type="radio"] {
   margin-right: 0.375rem;
