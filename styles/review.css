@@ -4,10 +4,12 @@
   padding: 0;
 }
 
-html { font-size: 100%; }
+html {
+  font-size: 100%;
+}
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   background: #f5f7fb;
   color: #111;
   line-height: 1.5;
@@ -31,9 +33,9 @@ main {
 }
 
 .card {
-  max-width: 40rem;            
+  max-width: 40rem;
   margin: 20vh auto;
-  background: #d3c7d6; 
+  background: #d3c7d6;
   border: 0.0625rem solid #c9c3cd;
   border-radius: 0.5rem;
   padding: 1rem;
