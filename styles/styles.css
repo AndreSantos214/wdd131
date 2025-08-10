@@ -89,7 +89,7 @@ legend {
 }
 
 .required-field {
-  color: rgb(175, 49, 49);
+  color: #af3131;
 }
 
 input[type="checkbox"],
