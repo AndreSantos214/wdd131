@@ -1,0 +1,148 @@
+body {
+  font-family: Spirax, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background-image: url(/images/background.webp);
+}
+
+header {
+  color: #632414;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+section {
+  background: #ca836b66;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #CA826B;
+  box-shadow: 0 2px 5px rgba(99,36,20,0.5);
+}
+
+h2 {
+  font-family: pacifico;
+  color: #632414;
+  border-bottom: 2px solid #CA826B;
+  padding-bottom: 10px;
+}
+
+a {
+  color: black;
+}
+
+.typography {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  overflow: hidden;
+}
+
+.color-palette {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.color-swatch {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.primary-brown { background-color: #632414; }
+.soft-pink { background-color: #F4D7BF; }
+.cream-white { background-color: #FFF8F0; border: 1px solid #ddd; }
+
+.scenarios ul {
+  list-style: none;
+  padding: 0;
+}
+
+.scenarios li {
+  background: #f4d7bf7c;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-left: 4px solid #632414;
+}
+
+.wireframes-img {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+img {
+  margin: 10px 0;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  main {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  
+  section {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  header {
+    padding: 15px 10px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .color-palette {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .color-swatch {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .typography {
+    gap: 30px;
+  }
+  
+  .wireframes-img {
+    gap: 30px;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 12px;
+  }
+  
+  header {
+    padding: 12px 8px;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+  
+  .scenarios li {
+    padding: 12px;
+  }
+}

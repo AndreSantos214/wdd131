@@ -9,8 +9,8 @@ function updateFooter() {
   lastModifiedElement.textContent = lastModifiedDate;
 }
 
-var temperature = 28;
-var windSpeed = 12;
+const temperature = 28;
+const windSpeed = 12;
 
 function calculateWindChill(temp, wind) {
   return (
@@ -22,10 +22,10 @@ function calculateWindChill(temp, wind) {
 }
 
 function showWindChill() {
-  var windChillPlace = document.getElementById("windchill");
+  const windChillPlace = document.getElementById("windchill");
 
   if (temperature <= 10 && windSpeed > 4.8) {
-    var result = calculateWindChill(temperature, windSpeed);
+    const result = calculateWindChill(temperature, windSpeed);
 
     windChillPlace.textContent = Math.round(result) + "°C";
   } else {

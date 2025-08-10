@@ -119,23 +119,23 @@ const temples = [
 ];
 
 function displayTemples(templesToDisplay) {
-  var grid = document.getElementById("templeGrid");
+  const grid = document.getElementById("templeGrid");
   grid.innerHTML = "";
 
-  for (var i = 0; i < templesToDisplay.length; i++) {
-    var temple = templesToDisplay[i];
+  for (let i = 0; i < templesToDisplay.length; i++) {
+    const temple = templesToDisplay[i];
 
-    var figure = document.createElement("figure");
+    const figure = document.createElement("figure");
 
-    var img = document.createElement("img");
+    const img = document.createElement("img");
     img.src = temple.imageUrl;
     img.alt = temple.templeName;
     img.loading = "lazy";
 
-    var caption = document.createElement("figcaption");
+    const caption = document.createElement("figcaption");
     caption.textContent = temple.templeName;
 
-    var details = document.createElement("div");
+    const details = document.createElement("div");
     details.className = "temple-details";
     details.innerHTML =
       "<p><strong>Location:</strong> " +
@@ -158,19 +158,19 @@ function displayTemples(templesToDisplay) {
 
 displayTemples(temples);
 
-var menuLinks = document.querySelectorAll("#menu a");
-var h2 = document.querySelector("main h2");
+const menuLinks = document.querySelectorAll("#menu a");
+const h2 = document.querySelector("main h2");
 
-for (var j = 0; j < menuLinks.length; j++) {
+for (let j = 0; j < menuLinks.length; j++) {
   menuLinks[j].addEventListener("click", function (event) {
     event.preventDefault();
-    var filter = this.getAttribute("href").replace("#", "");
-    var filteredTemples = temples;
+    const filter = this.getAttribute("href").replace("#", "");
+    let filteredTemples = temples;
 
     if (filter === "old") {
       filteredTemples = [];
-      for (var k = 0; k < temples.length; k++) {
-        var year = parseInt(temples[k].dedicated.split(",")[0]);
+      for (let k = 0; k < temples.length; k++) {
+        const year = parseInt(temples[k].dedicated.split(",")[0]);
         if (year < 1900) {
           filteredTemples.push(temples[k]);
         }
@@ -178,8 +178,8 @@ for (var j = 0; j < menuLinks.length; j++) {
       h2.textContent = "Old Temples";
     } else if (filter === "new") {
       filteredTemples = [];
-      for (var k = 0; k < temples.length; k++) {
-        var year = parseInt(temples[k].dedicated.split(",")[0]);
+      for (let k = 0; k < temples.length; k++) {
+        const year = parseInt(temples[k].dedicated.split(",")[0]);
         if (year > 2000) {
           filteredTemples.push(temples[k]);
         }
@@ -187,7 +187,7 @@ for (var j = 0; j < menuLinks.length; j++) {
       h2.textContent = "New Temples";
     } else if (filter === "large") {
       filteredTemples = [];
-      for (var k = 0; k < temples.length; k++) {
+      for (let k = 0; k < temples.length; k++) {
         if (temples[k].area > 90000) {
           filteredTemples.push(temples[k]);
         }
@@ -195,7 +195,7 @@ for (var j = 0; j < menuLinks.length; j++) {
       h2.textContent = "Large Temples";
     } else if (filter === "small") {
       filteredTemples = [];
-      for (var k = 0; k < temples.length; k++) {
+      for (let k = 0; k < temples.length; k++) {
         if (temples[k].area < 10000) {
           filteredTemples.push(temples[k]);
         }
