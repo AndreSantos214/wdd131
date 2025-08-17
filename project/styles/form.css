@@ -199,15 +199,10 @@ footer a:hover {
   display: block;
 }
 
-/* ===== CONTACT SECTION ===== */
-#contact img {
-  transition: transform 0.3s ease;
-  cursor: pointer;
+.required {
+  color: rgb(165, 13, 13);
 }
 
-#contact img:hover {
-  transform: scale(1.1);
-}
 
 @media (max-width: 480px) {
   .form-container {
