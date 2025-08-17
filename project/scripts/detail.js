@@ -149,7 +149,7 @@ const carouselProducts = [
     id: 6,
     name: "Complete Delight",
     category: "Classic Flavors Mix",
-    price: 5.8,
+    price: 18,
     image: "images/all_cakes.webp",
     description:
       "A special selection of our most beloved flavors. Perfect for those who can't choose just one and want to experience the best of everything.",

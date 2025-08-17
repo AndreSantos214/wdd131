@@ -41,7 +41,7 @@ const products = [
     id: 6,
     name: "Complete Delight",
     category: "Classic Flavors Mix",
-    price: "5,80€",
+    price: "18,00€",
     image: "images/all_cakes.webp",
   },
 ];
