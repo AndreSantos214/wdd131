@@ -55,7 +55,7 @@ function updateCartCounter() {
     if (cartCount > 0) {
       cartCountElement.style.display = "flex";
     } else {
-      cartCountElement.style.display = "none";
+      cartCountElement.style.display = "flex";
     }
   }
 }
