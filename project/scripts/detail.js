@@ -11,6 +11,29 @@ function setResponsiveLink() {
   }
 }
 
+function checkUserData() {
+  const userData = localStorage.getItem("userData");
+
+  if (userData) {
+    const user = JSON.parse(userData);
+    if (user.name && user.phone && user.email) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function handleCartClick(event) {
+  event.preventDefault();
+
+  if (checkUserData()) {
+    window.location.href = "cart.html";
+  } else {
+    alert("Please fill in your information first!");
+    window.location.href = "form.html";
+  }
+}
+
 function loadCartFromStorage() {
   const savedCart = localStorage.getItem("cartItems");
   if (savedCart) {
