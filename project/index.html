@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enchanted Sweet</title>
+  <meta name="description" content="Layers of love to savor. Jar desserts made with care." />
+  <meta name="author" content="André de Oliveira Santos" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Spirax&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/index.css" />
+
+  <script src="scripts/index-mobile.js"></script>
+</head>
+
+<body>
+  <!-- ========== BACKGROUND STYLES ========== -->
+  <style>
+    header {
+      position: relative;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("images/background-header.webp");
+      background-size: cover;
+      opacity: 0.5;
+      z-index: -1;
+    }
+
+    body {
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("images/background_cups.webp");
+      background-size: cover;
+      opacity: 0.5;
+      z-index: -1;
+    }
+
+    .product-card {
+      position: relative;
+    }
+
+    .product-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url(images/card-background.webp);
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 10px;
+      z-index: -1;
+    }
+
+    footer {
+      position: relative;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("images/background-header.webp");
+      background-size: cover;
+      z-index: -1;
+    }
+  </style>
+
+  <!-- ========== HEADER SECTION ========== -->
+  <header>
+    <div class="container">
+      <!-- Hamburger Menu -->
+      <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <nav class="mobile-nav" id="mobile-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="logo">
+        <img src="images/Logo.webp" alt="Enchanted Sweet" width="100" height="100" loading="lazy">
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <img src="images/little_cake.svg" alt="Little cake" width="7" loading="lazy">
+          <li><a href="#products">Products</a></li>
+          <img src="images/little_cake.svg" alt="Little cake" width="7" loading="lazy">
+          <li><a href="#">About</a></li>
+          <img src="images/little_cake.svg" alt="Little cake" width="7" loading="lazy">
+          <li><a href="#contact" onclick="scrollToContact()" ondclick="closeMenu()" return false;>Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <div class="search-container">
+          <input type="text" class="search-input" id="search-input" placeholder="Search for cake" onkeyup="searchProducts()" onkeypress="handleEnter(event)">
+          <a id="search-button" class="search-button" href="#products">
+            <img src="images/search-icon.svg" alt="Search Icon" loading="lazy">
+          </a>
+        </div>
+        <a href="#" class="cart-link" onclick="handleCartClick(event)">
+          <img class="cart-icon" src="images/cart.svg" alt="Cart" width="10" loading="lazy">
+          <span class="cart-badge" id="cart-count">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main>
+    <!-- ========== HERO SECTION ========== -->
+    <div class="container">
+      <div class="content-wrapper">
+        <div class="text-content">
+          <h1>
+            Various Layers of Love to Savor
+          </h1>
+          <p>Each jar carries the affection and care that unites us and the dream that inspires us to sweeten your day.</p>
+
+          <a class="btn-primary" href="#products">Place Order</a>
+        </div>
+        <div class="cups_photo">
+          <img class="cups" src="images/cake-hero.webp" alt="Cake photo" width="400" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== PRODUCTS SECTION ========== -->
+    <section class="products-section">
+      <div class="container">
+        <div id="products" class="section-header">
+          <h2>Our Special Sweets</h2>
+          <p>Discover our selection of artisanal desserts, made with love and selected ingredients.</p>
+        </div>
+        <div class="products-grid" id="products-grid">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER SECTION ========== -->
+  <footer>
+    <a href="#">About Us</a>
+    <p>©2025 André de Oliveira Santos</p>
+    <div id="contact" class="social">
+      <a class="midia" href="#"><img src="images/whatsapp.svg" alt="WhatsApp" width="50" height="50" loading="lazy"></a>
+      <a class="midia" href="#"><img src="images/gmail.svg" alt="Gmail" width="40" height="40" loading="lazy"></a>
+      <a class="midia" href="#"><img src="images/instagram.svg" alt="Instagram" width="40" height="40" loading="lazy"></a>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="scripts/index.js"></script>
+</body>
+
+</html>

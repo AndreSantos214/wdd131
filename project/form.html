@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Help us make our wedding dream come true - Fill out the donation form with your details to contribute to our special day.">
+  <meta name="author" content="André de Oliveira Santos">
+  <title>Wedding Donation Form</title>
+
+  <link rel="stylesheet" href="styles/form.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Spirax&display=swap" rel="stylesheet">
+
+  <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+  <!-- ========== BACKGROUND STYLES ========== -->
+  <style>
+    header::before,
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("images/background-header.webp");
+      background-size: cover;
+      opacity: 0.5;
+      z-index: 1;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("images/background.webp");
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0.5;
+      z-index: -1;
+    }
+
+    .product-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url(images/card-background.webp);
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 10px;
+      z-index: -1;
+    }
+
+    header,
+    footer {
+      position: relative;
+    }
+
+    body,
+    .product-card {
+      position: relative;
+    }
+
+    footer::before {
+      z-index: -1;
+    }
+  </style>
+
+  <!-- ========== MAIN CONTAINER ========== -->
+  <div class="container">
+    <!-- ========== HEADER SECTION ========== -->
+    <header class="header">
+      <div class="header-content">
+        <a href="index.html" id="arrow-link">
+          <div class="arrow">
+            <img src="images/arrow.svg" alt="Back arrow" loading="lazy">
+          </div>
+        </a>
+
+        <div class="donation-section">
+          <img src="images/form_page.svg" alt="Form page" loading="lazy">
+        </div>
+
+
+      </div>
+    </header>
+
+    <!-- ========== FORM SECTION ========== -->
+    <div class="form-container">
+      <h1 class="main-title">Help us make our<br>wedding dream come true <span class="heart">💖</span></h1>
+
+      <div class="form-title">
+        Please fill out the form below to<br>better your experience
+      </div>
+
+      <form id="donationForm">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+    <!-- ========== FOOTER SECTION ========== -->
+    <footer>
+      <a href="#">About Us</a>
+      <p>©2025 André de Oliveira Santos</p>
+      <div id="contact" class="social">
+        <a class="midia" href="#"><img src="images/whatsapp.svg" alt="WhatsApp" width="50" height="50" loading="lazy"></a>
+        <a class="midia" href="#"><img src="images/gmail.svg" alt="Gmail" width="40" height="40" loading="lazy"></a>
+        <a class="midia" href="#"><img src="images/instagram.svg" alt="Instagram" width="40" height="40" loading="lazy"></a>
+      </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+/* ========================================
+   GLOBAL RESET
+   ======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========================================
+   BODY STYLES
+   ======================================== */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Spirax", cursive;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ========================================
+   MAIN CONTENT
+   ======================================== */
+.main-content {
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+
+.coming-soon {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #632414;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #632414;
+  opacity: 0.8;
+  margin-top: 10px;
+}
+
+/* ========================================
+   MEDIA QUERIES
+   ======================================== */
+@media (max-width: 768px) {
+  .coming-soon {
+    font-size: 3rem;
+  }
+
+  .swirl {
+    opacity: 0.2;
+  }
+
+  .decorative-element {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: 480px) {
+  .coming-soon {
+    font-size: 2.5rem;
+  }
+}

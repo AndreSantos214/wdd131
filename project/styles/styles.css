@@ -1,41 +1,76 @@
+/* ===== GLOBAL RESET AND BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Spirax, sans-serif;
   line-height: 1.6;
   margin: 0;
+  background: linear-gradient(135deg, #fff8f0 0%, #f4d7bf 100%);
+  min-height: 100vh;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #632414;
+}
+
+/* ===== HEADER SECTION ===== */
 header {
   color: #632414;
   text-align: center;
   padding: 20px;
   margin-bottom: 30px;
+  background: rgba(255, 248, 240, 0.8);
+  box-shadow: 0 2px 10px rgba(99, 36, 20, 0.1);
 }
 
+/* ===== MAIN CONTENT ===== */
 main {
   max-width: 800px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
+/* ===== SECTION STYLES ===== */
 section {
   background: #ca836b66;
   margin-bottom: 20px;
   padding: 20px;
-  border-radius: 5px;
-  border: 1px solid #CA826B;
-  box-shadow: 0 2px 5px rgba(99,36,20,0.5);
+  border-radius: 8px;
+  border: 1px solid #ca826b;
+  box-shadow: 0 4px 12px rgba(99, 36, 20, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 36, 20, 0.2);
+}
+
+/* ===== HEADINGS ===== */
 h2 {
-  font-family: pacifico;
+  font-family: pacifico, sans-serif;
   color: #632414;
-  border-bottom: 2px solid #CA826B;
+  border-bottom: 2px solid #ca826b;
   padding-bottom: 10px;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
 }
 
-a {
-  color: black;
+h2:hover {
+  color: #8b4513;
 }
 
+/* ===== TYPOGRAPHY SECTION ===== */
 .typography {
   display: flex;
   flex-direction: column;
@@ -43,10 +78,12 @@ a {
   overflow: hidden;
 }
 
+/* ===== COLOR PALETTE SECTION ===== */
 .color-palette {
   display: flex;
   gap: 20px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .color-swatch {
@@ -54,12 +91,47 @@ a {
   height: 80px;
   border-radius: 50%;
   margin-bottom: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
 }
 
-.primary-brown { background-color: #632414; }
-.soft-pink { background-color: #F4D7BF; }
-.cream-white { background-color: #FFF8F0; border: 1px solid #ddd; }
+.color-swatch:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 
+.color-swatch::after {
+  content: attr(data-color);
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #632414;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.color-swatch:hover::after {
+  opacity: 1;
+}
+
+/* Color definitions */
+.primary-brown {
+  background-color: #632414;
+}
+
+.soft-pink {
+  background-color: #f4d7bf;
+}
+
+.cream-white {
+  background-color: #fff8f0;
+  border: 2px solid #ddd;
+}
+
+/* ===== SCENARIOS SECTION ===== */
 .scenarios ul {
   list-style: none;
   padding: 0;
@@ -70,8 +142,17 @@ a {
   padding: 15px;
   margin-bottom: 10px;
   border-left: 4px solid #632414;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
+.scenarios li:hover {
+  background: #f4d7bf;
+  border-left-width: 6px;
+  transform: translateX(5px);
+}
+
+/* ===== WIREFRAMES SECTION ===== */
 .wireframes-img {
   display: flex;
   flex-direction: column;
@@ -80,68 +161,98 @@ a {
 
 img {
   margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 100%;
+  height: auto;
 }
 
-/* Mobile Styles */
+img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
   main {
     max-width: 100%;
-    padding: 0 10px;
+    padding: 0 15px;
   }
-  
+
   section {
     padding: 15px;
     margin-bottom: 15px;
   }
-  
+
   header {
     padding: 15px 10px;
     margin-bottom: 20px;
   }
-  
+
   h2 {
     font-size: 1.5rem;
   }
-  
+
   .color-palette {
     flex-direction: column;
     align-items: center;
     gap: 15px;
   }
-  
+
   .color-swatch {
     width: 60px;
     height: 60px;
   }
-  
+
   .typography {
     gap: 30px;
   }
-  
+
   .wireframes-img {
     gap: 30px;
   }
-  
-  img {
-    width: 100%;
-    height: auto;
+
+  .scenarios li {
+    padding: 12px;
   }
 }
 
 @media (max-width: 480px) {
+  main {
+    padding: 0 10px;
+  }
+
   section {
     padding: 12px;
+    margin-bottom: 12px;
   }
-  
+
   header {
     padding: 12px 8px;
+    margin-bottom: 15px;
   }
-  
+
   h2 {
     font-size: 1.3rem;
+    padding-bottom: 8px;
   }
-  
+
   .scenarios li {
-    padding: 12px;
+    padding: 10px;
+    margin-bottom: 8px;
+  }
+
+  .color-swatch {
+    width: 50px;
+    height: 50px;
+  }
+
+  .typography {
+    gap: 20px;
+  }
+
+  .wireframes-img {
+    gap: 20px;
   }
 }

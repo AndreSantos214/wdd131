@@ -1,0 +1,236 @@
+/* ===== GLOBAL RESET AND BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Spirax, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+/* ===== HEADER SECTION ===== */
+header {
+  width: 100%;
+}
+
+.header {
+  padding: 15px 20px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  padding: 0 5vw;
+  height: 70px;
+}
+
+.arrow {
+  position: absolute;
+  left: 7vw;
+  top: 1.5rem;
+  cursor: pointer;
+}
+
+.donation-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===== CART SECTION ===== */
+.main-message {
+  font-family: Spirax, sans-serif;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: normal;
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+
+.heart {
+  color: #ff69b4;
+  font-size: 1.5rem;
+}
+
+.form-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  backdrop-filter: blur(10px);
+  background-color: transparent;
+  color: #632414;
+}
+
+.form-container .main-title {
+  margin-bottom: 20px;
+}
+
+.form-title {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: #fafafa;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #b8860b;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(184, 134, 11, 0.1);
+}
+
+.submit-btn {
+  font-family: Spirax, sans-serif;
+  width: 100%;
+  background-color: #632414;
+  color: white;
+  border: none;
+  padding: 18px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(184, 134, 11, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* ===== FOOTER SECTION ===== */
+footer {
+  font-family: pacifico, sans-serif;
+  color: #633514;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 50px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+footer p {
+  margin-left: 10rem;
+}
+
+footer a {
+  color: #633514;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #b4510a;
+}
+
+/* ===== SOCIAL MEDIA ===== */
+.social {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.midia {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.midia:hover {
+  transform: scale(1.2);
+}
+
+.midia img {
+  display: block;
+}
+
+/* ===== CONTACT SECTION ===== */
+#contact img {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+#contact img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 30px 25px;
+  }
+
+  .main-title {
+    font-size: 1.8rem;
+  }
+
+  .form-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .social {
+    flex-direction: column;
+  }
+
+  footer p {
+    justify-self: center;
+    text-align: center;
+    margin-left: 0;
+  }
+}

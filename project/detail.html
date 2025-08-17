@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover delicious cake details with ChocoCarinho - Light dough, generous filling and mouth-watering toppings. Add to cart and sweeten your day.">
+  <meta name="author" content="André de Oliveira Santos">
+  <title>Cake Details</title>
+
+  <link rel="stylesheet" href="styles/detail.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Spirax&display=swap" rel="stylesheet">
+
+  <script src="scripts/detail.js"></script>
+</head>
+
+<body>
+  <!-- ========== BACKGROUND STYLES ========== -->
+  <style>
+    header::before,
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("images/background-header.webp");
+      background-size: cover;
+      opacity: 0.5;
+      z-index: 1;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("images/background.webp");
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0.5;
+      z-index: -1;
+    }
+
+    .product-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url(images/card-background.webp);
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 10px;
+      z-index: -1;
+    }
+
+    header,
+    footer {
+      position: relative;
+    }
+
+    body,
+    .product-card {
+      position: relative;
+    }
+
+    footer::before {
+      z-index: -1;
+    }
+  </style>
+
+  <!-- ========== MAIN CONTAINER ========== -->
+  <div class="container">
+    <!-- ========== HEADER SECTION ========== -->
+    <header class="header">
+      <div class="header-content">
+        <a href="index.html" id="arrow-link">
+          <div class="arrow">
+            <img src="images/arrow.svg" alt="Back arrow" loading="lazy">
+          </div>
+        </a>
+
+        <div class="donation-section">
+          <img src="images/cake-details.svg" alt="Cake details" loading="lazy">
+        </div>
+
+        <div class="cart-section">
+          <a href="#" class="cart-link" onclick="handleCartClick(event)">
+            <img class="cart-icon" src="images/cart.svg" alt="Cart" loading="lazy">
+            <span class="cart-badge" id="cart-count">0</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ========== CAROUSEL SECTION ========== -->
+    <section class="carousel-section">
+      <div class="carousel-container">
+        <div class="carousel-wrapper" id="carousel-wrapper">
+        </div>
+
+        <div class="carousel-dots" id="carousel-dots">
+        </div>
+
+        <button class="carousel-btn prev-btn" onclick="previousSlide()">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="white" />
+          </svg>
+        </button>
+        <button class="carousel-btn next-btn" onclick="nextSlide()">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="white" />
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ========== PRODUCT DETAILS SECTION ========== -->
+    <section class="product-details-section">
+      <div class="product-details-container">
+        <div class="product-info-card">
+          <div class="product-header">
+            <h2 class="product-title" id="product-title">ChocoCarinho</h2>
+            <p class="product-category" id="product-category">Brigadeiro</p>
+          </div>
+
+          <div class="product-description">
+            <p id="product-description">
+              Be amazed by this dream cake: light dough, generous filling and a mouth-watering topping. This cake is the right choice for those who seek to enchant and sweeten the day.
+            </p>
+          </div>
+
+          <div class="product-actions">
+            <div class="price-section">
+              <div class="price-style">
+                <h3>Price</h3>
+              </div>
+              <div class="product-price"><span id="product-price">€4.60</span></div>
+            </div>
+
+            <div class="quantity-section">
+              <h3>Quantity</h3>
+              <div class="quantity-controls">
+                <button class="quantity-btn minus" onclick="decreaseQuantity()">−</button>
+                <span class="quantity-display" id="quantity-display">1</span>
+                <button class="quantity-btn plus" onclick="increaseQuantity()">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="cart-buttons">
+            <button class="cart-btn" onclick="handleCartClick(event)">
+              <img src="images/cart.svg" alt="Cart icon" loading="lazy"> Cart
+            </button>
+            <button class="add-to-cart-btn" onclick="addCurrentProductToCart()">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ========== FOOTER SECTION ========== -->
+  <footer>
+    <a href="#">About Us</a>
+    <p>©2025 André de Oliveira Santos</p>
+    <div class="social">
+      <a class="midia" href="#"><img src="images/whatsapp.svg" alt="WhatsApp" width="50" height="50" loading="lazy"></a>
+      <a class="midia" href="#"><img src="images/gmail.svg" alt="Gmail" width="40" height="40" loading="lazy"></a>
+      <a class="midia" href="#"><img src="images/instagram.svg" alt="Instagram" width="40" height="40" loading="lazy"></a>
+    </div>
+  </footer>
+
+</body>
+
+</html>

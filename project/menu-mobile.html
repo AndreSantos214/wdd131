@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Mobile</title>
+
+  <link rel="stylesheet" href="styles/menu-mobile.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Spirax&display=swap" rel="stylesheet">
+
+  <script src="scripts/index.js"></script>
+</head>
+
+<body>
+  <!-- ========== BACKGROUND STYLES ========== -->
+  <style>
+    header {
+      position: relative;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("images/background-header.webp");
+      background-size: cover;
+      opacity: 0.5;
+      z-index: 1;
+    }
+
+    body {
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("images/background_cups.webp");
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0.5;
+      z-index: -1;
+    }
+
+    .product-card {
+      position: relative;
+    }
+
+    .product-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url(images/card-background.webp);
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 10px;
+      z-index: -1;
+    }
+
+    footer {
+      position: relative;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("images/background-header.webp");
+      background-size: cover;
+      z-index: -1;
+    }
+  </style>
+
+  <!-- ========== MAIN CONTAINER ========== -->
+  <div class="container">
+    <!-- ========== HEADER SECTION ========== -->
+    <header class="header">
+      <div class="header-content">
+        <!-- Menu Toggle -->
+        <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()">
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <nav class="mobile-nav" id="mobile-nav">
+          <ul class="nav-list">
+            <li><a href="#" onclick="closeMenu()">Home</a></li>
+            <li><a href="#products" onclick="closeMenu()">Products</a></li>
+            <li><a href="#" onclick="closeMenu()">About</a></li>
+            <li><a href="#contact" onclick="scrollToContact(); closeMenu();" return false;">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Donation Section -->
+        <div class="donation-section">
+          <a href="#"><img src="images/make_donation.svg" alt="Make donation" loading="lazy"></a>
+        </div>
+
+        <!-- Shopping Cart -->
+        <div class="cart-section">
+          <a href="#" class="cart-link">
+            <img class="cart-icon" src="images/cart.svg" alt="Cart" loading="lazy">
+            <span class="cart-badge" id="cart-count">0</span>
+          </a>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero-section">
+    <!-- Logo Container -->
+    <div class="logo-container">
+      <img src="images/Logo.webp" alt="Sweet Enchanted Logo" class="logo-image" loading="lazy">
+    </div>
+
+    <!-- Welcome Text -->
+    <div class="welcome-text" id="dynamic-greeting">
+      Good Day,<br>
+      Welcome
+    </div>
+
+    <!-- Search Container -->
+    <div class="search-container">
+      <input type="text" class="search-input" id="search-input" placeholder="Search for cake" onkeyup="searchProducts()">
+      <button class="search-button" onclick="searchProducts()">
+        <img src="images/search-icon.svg" alt="Search Icon" loading="lazy">
+      </button>
+    </div>
+  </section>
+
+  <!-- ========== PRODUCTS SECTION ========== -->
+  <section class="products-section">
+    <div class="container">
+      <div id="products" class="section-header">
+        <h2>Our Special Sweets</h2>
+        <p>Discover our selection of artisanal desserts, made with love and selected ingredients.</p>
+      </div>
+      <div class="products-grid" id="products-grid">
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER SECTION ========== -->
+  <footer class="container">
+    <a href="#">About Us</a>
+    <p>©2025 André de Oliveira Santos</p>
+    <div id="contact" class="social">
+      <a class="midia" href="#"><img src="images/whatsapp.svg" alt="WhatsApp" width="30" height="30" loading="lazy"></a>
+      <a class="midia" href="#"><img src="images/gmail.svg" alt="Gmail" width="20" height="20" loading="lazy"></a>
+      <a class="midia" href="#"><img src="images/instagram.svg" alt="Instagram" width="20" height="20" loading="lazy"></a>
+    </div>
+  </footer>
+</body>
+
+</html>
