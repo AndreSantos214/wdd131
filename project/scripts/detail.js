@@ -12,7 +12,7 @@ function setResponsiveLink() {
 }
 
 function loadCartFromStorage() {
-  const savedCart = localStorage.getItem('cartItems');
+  const savedCart = localStorage.getItem("cartItems");
   if (savedCart) {
     cartItems = JSON.parse(savedCart);
     cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
@@ -21,14 +21,14 @@ function loadCartFromStorage() {
 }
 
 function saveCartToStorage() {
-  localStorage.setItem('cartItems', JSON.stringify(cartItems));
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
 }
 
 function updateCartCounter() {
   const cartCountElement = document.getElementById("cart-count");
   if (cartCountElement) {
     cartCountElement.textContent = cartCount;
-    
+
     if (cartCount > 0) {
       cartCountElement.style.display = "flex";
     } else {
@@ -42,8 +42,10 @@ function addToCart(productId, quantity = 1) {
 
   for (let i = 0; i < carouselProducts.length; i++) {
     if (carouselProducts[i].id == productId) {
-      const existingItemIndex = cartItems.findIndex(item => item.id === productId);
-      
+      const existingItemIndex = cartItems.findIndex(
+        (item) => item.id === productId
+      );
+
       if (existingItemIndex !== -1) {
         cartItems[existingItemIndex].quantity += quantity;
       } else {
@@ -53,10 +55,10 @@ function addToCart(productId, quantity = 1) {
           category: carouselProducts[i].category,
           price: carouselProducts[i].price.toFixed(2) + "€",
           image: carouselProducts[i].image,
-          quantity: quantity
+          quantity: quantity,
         });
       }
-      
+
       cartCount += quantity;
       updateCartCounter();
       saveCartToStorage();
@@ -404,8 +406,7 @@ function addCurrentProductToCart() {
   }, 1500);
 }
 
-function viewCart() {
-}
+function viewCart() {}
 
 function handleKeyPress(event) {
   if (isAnimating) return;

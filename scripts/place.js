@@ -33,7 +33,7 @@ function showWindChill() {
   }
 }
 
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
   updateFooter();
   showWindChill();
 });
