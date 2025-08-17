@@ -432,6 +432,7 @@ footer {
 
 footer p {
   text-align: center;
+  margin-left: 8rem;
 }
 
 footer a {
@@ -478,6 +479,11 @@ footer a {
 
   .product-info-card {
     width: 60vw;
+  }
+
+  footer p {
+    text-align: center;
+    margin-left: 0rem;
   }
 }
 
