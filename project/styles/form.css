@@ -203,6 +203,15 @@ footer a:hover {
   color: rgb(165, 13, 13);
 }
 
+/* ===== CONTACT SECTION ===== */
+#contact img {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+#contact img:hover {
+  transform: scale(1.1);
+}
 
 @media (max-width: 480px) {
   .form-container {
